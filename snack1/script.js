@@ -19,11 +19,9 @@ const player = ['codice','name','surname','age','scoreMedium','successXcent']
 console.log(player)
 
 const letter = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','Y','Z']
+console.log(letter)
 
-for (let i = 0; i <= letter.lenght; i++){
-    
-}
-
+let rand = '';
 
 
 
@@ -31,5 +29,14 @@ for (let i = 0; i <= letter.lenght; i++){
 
 //Generazione codice giocatore
 
-const codex = [''];
+num = [];
+
+    for (let i = 0; i <= letter.length; i++){
+        rand = Math.floor(Math.random()*25) -1;
+        num.push(rand)
+    }
+
+console.log(num)
+
+
 
