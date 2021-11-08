@@ -25,8 +25,8 @@ const players = [
         nome: 'James',
         cognome: 'Lebron',
         età: '36 anni',
-        mediumScore: '',
-        successXcent:''
+        mediumScore,
+        successXcent
     },
     player2 = {
         codPlayer,
@@ -41,8 +41,8 @@ const players = [
         nome: 'Wilt',
         cognome: 'Chamberlain',
         età: '',
-        mediumScore: '',
-        successXcent:''
+        mediumScore,
+        successXcent
     }
 ]
 console.table(players)
@@ -65,8 +65,13 @@ console.log(letter);
   console.log(codex)
 
 //Generazione punteggio
+mediumScore = genNumberTo(50);
+console.log(mediumScore);
 
-//
+//Generazio
+success = genNumberTo(100);
+successXcent = success + '%';
+console.log(successXcent);
 
 //Functions
 
@@ -88,6 +93,11 @@ function generateRandomString(iLen) {
       sRnd2 += sChrs2.substring(randomPoz, randomPoz + 1);
     }
     return sRnd2;
+  }
+
+  function genNumberTo(max){
+      let scoreStart = Math.floor(Math.random() * max);
+      return scoreStart;
   }
 
 
