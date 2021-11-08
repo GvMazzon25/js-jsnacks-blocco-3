@@ -19,24 +19,43 @@ const player = ['codice','name','surname','age','scoreMedium','successXcent']
 console.log(player)
 
 const letter = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','Y','Z']
-console.log(letter)
-
-let rand = '';
+console.log(letter);
 
 
+//Generazione codice giocatore
+  //Gen letter
+  let stringa_random = generateRandomString(3);
+  console.log(stringa_random);
+
+  //Gen number
+  let numbers_random = generateRandomNumbers(3);
+  console.log(numbers_random);
+
+  //Codice
+  const codex = numbers_random + stringa_random;
+  console.log(codex)
 
 //Functions
 
-//Generazione codice giocatore
-
-num = [];
-
-    for (let i = 0; i <= letter.length; i++){
-        rand = Math.floor(Math.random()*25) -1;
-        num.push(rand)
+function generateRandomString(iLen) {
+    let sRnd = '';
+    let sChrs = "ABCDEFGHIJKLMNOPQRSTUVWXTZ";
+    for (let i = 0; i < iLen; i++) {
+      let randomPoz = Math.floor(Math.random() * sChrs.length);
+      sRnd += sChrs.substring(randomPoz, randomPoz + 1);
     }
+    return sRnd;
+  }
 
-console.log(num)
+  function generateRandomNumbers(numLen) {
+    let sRnd2 = '';
+    let sChrs2 = "0123456789";
+    for (let i = 0; i < numLen; i++) {
+      let randomPoz = Math.floor(Math.random() * sChrs2.length);
+      sRnd2 += sChrs2.substring(randomPoz, randomPoz + 1);
+    }
+    return sRnd2;
+  }
 
 
 
