@@ -15,8 +15,37 @@ Creare un oggetto che rappresenti un giocatore di basket, con le seguenti propri
 5. Creare un nuovo array con i giocatori che hanno una media di punti superiore a 35 e la percentuale di successo per i tiri da 3 punti superiore all’80%. */
 
 
-const player = ['codice','name','surname','age','scoreMedium','successXcent']
-console.log(player)
+let codPlayer = '';
+let mediumScore = '';
+let successXcent = '';
+
+const players = [
+    player1 = {
+        codPlayer,
+        nome: 'James',
+        cognome: 'Lebron',
+        età: '36 anni',
+        mediumScore: '',
+        successXcent:''
+    },
+    player2 = {
+        codPlayer,
+        nome: 'Michael',
+        cognome: 'Jordan',
+        età: '58 anni',
+        mediumScore,
+        successXcent 
+    },
+    player3 = {
+        codPlayer: '',
+        nome: 'Wilt',
+        cognome: 'Chamberlain',
+        età: '',
+        mediumScore: '',
+        successXcent:''
+    }
+]
+console.table(players)
 
 const letter = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','Y','Z']
 console.log(letter);
@@ -32,8 +61,12 @@ console.log(letter);
   console.log(numbers_random);
 
   //Codice
-  const codex = numbers_random + stringa_random;
+  codex = numbers_random + stringa_random;
   console.log(codex)
+
+//Generazione punteggio
+
+//
 
 //Functions
 
