@@ -3,4 +3,8 @@ Es: [1, 2, 3, 4, 5] => [1, 4, 9, 16, 25]*/
 
 const number = [1,2,3,4,5];
 
-fu
+const myFunction = () => number * number;
+
+const result = myFunction();
+
+console.log(result);

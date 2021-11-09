@@ -14,42 +14,22 @@ Creare un oggetto che rappresenti un giocatore di basket, con le seguenti propri
 4. Creare un array di 10 giocatori di basket, con le regole sopra indicate
 5. Creare un nuovo array con i giocatori che hanno una media di punti superiore a 35 e la percentuale di successo per i tiri da 3 punti superiore all’80%. */
 
-
-let codPlayer = '';
-let mediumScore = '';
-let successXcent = '';
-
-const players = [
-    player1 = {
-        codPlayer,
+const players = {
+        codPlayer: generateCodex(),
         nome: 'James',
         cognome: 'Lebron',
         età: '36 anni',
-        mediumScore,
-        successXcent
-    },
-    player2 = {
-        codPlayer,
-        nome: 'Michael',
-        cognome: 'Jordan',
-        età: '58 anni',
-        mediumScore,
-        successXcent 
-    },
-    player3 = {
-        codPlayer: '',
-        nome: 'Wilt',
-        cognome: 'Chamberlain',
-        età: '',
-        mediumScore,
-        successXcent
-    }
-]
+        mediumScore: genNumberTo(50), 
+        successXcent:  genNumberTo(100)
+}
+
 console.table(players)
 
 const letter = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','Y','Z']
 console.log(letter);
 
+const {codPlayer, nome, cognome, age} = players;
+console.log(`Il giocatore ${nome} ${cognome} ha ${age} anni e il suo codice giocatore è ${codPlayer}`);
 
 //Generazione codice giocatore
   //Gen letter
@@ -59,10 +39,6 @@ console.log(letter);
   //Gen number
   let numbers_random = generateRandomNumbers(3);
   console.log(numbers_random);
-
-  //Codice
-  codex = numbers_random + stringa_random;
-  console.log(codex)
 
 //Generazione punteggio
 mediumScore = genNumberTo(50);
@@ -74,6 +50,11 @@ successXcent = success + '%';
 console.log(successXcent);
 
 //Functions
+
+function generateCodex(numbers_random, stringa_random){
+  const codex = generateRandomNumbers(3) + generateRandomString(3);
+  return codex;
+}
 
 function generateRandomString(iLen) {
     let sRnd = '';
@@ -99,6 +80,9 @@ function generateRandomString(iLen) {
       let scoreStart = Math.floor(Math.random() * max);
       return scoreStart;
   }
+
+
+
 
 
 
