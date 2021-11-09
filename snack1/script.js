@@ -25,6 +25,45 @@ const players = {
 
 console.table(players)
 
+
+const playersGroup = [
+  {
+    codPlayer: generateCodex(),
+        nome: 'James',
+        cognome: 'Lebron',
+        età: '36 anni',
+        mediumScore: genNumberTo(50), 
+        successXcent:  genNumberTo(100)
+  },
+  {
+    codPlayer: generateCodex(),
+        nome: 'Michael',
+        cognome: 'Jordan',
+        età: '36 anni',
+        mediumScore: genNumberTo(50), 
+        successXcent:  genNumberTo(100)
+  },
+  {
+    codPlayer: generateCodex(),
+        nome: 'Gabriele',
+        cognome: 'Baschettiere',
+        età: '26 anni',
+        mediumScore: genNumberTo(50), 
+        successXcent:  genNumberTo(100)
+  },
+  {
+    codPlayer: generateCodex(),
+        nome: 'Giocatore',
+        cognome: 'Big',
+        età: '39 anni',
+        mediumScore: genNumberTo(50), 
+        successXcent:  genNumberTo(100)
+  }
+]
+
+const topPlayers = playersGroup.filter((players) => players.pointsAverage > 35 && players.successPercentage > 80);
+console.table(topPlayers);
+
 const letter = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','Y','Z']
 console.log(letter);
 
